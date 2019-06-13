@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PatientUI.Profile">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="100.0" layoutY="321.0" prefHeight="200.0" prefWidth="300.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="image" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <VBox.margin>
+                        <Insets bottom="80.0" top="20.0" />
+                    </VBox.margin>
+                    <viewport>
+                        <Rectangle2D />
+                    </viewport>
+                </ImageView>
+                <Label fx:id="email">
+               <graphic>
+                  <CheckBox fx:id="emailEdit" mnemonicParsing="false" />
+               </graphic></Label>
+                <Label fx:id="name">
+               <graphic>
+                  <CheckBox fx:id="nameEdit" mnemonicParsing="false" />
+               </graphic></Label>
+                <Label fx:id="contact">
+               <graphic>
+                  <CheckBox fx:id="phoneEdit" mnemonicParsing="false" />
+               </graphic></Label>
+                <Label fx:id="dob">
+               <graphic>
+                  <CheckBox fx:id="dobEdit" mnemonicParsing="false" />
+               </graphic></Label>
+                <JFXButton buttonType="RAISED" onAction="#editClick" prefHeight="36.0" prefWidth="117.0" ripplerFill="#3c277a" style="-fx-background-color: #0BACA1;" text="Edit" textFill="WHITE" />
+            </children>
+        </VBox>
+        <JFXButton layoutX="14.0" layoutY="757.0" onAction="#backClick" prefHeight="32.0" prefWidth="105.0" text="Back">
+            <graphic>
+                <ImageView fitHeight="27.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/app-05.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+    </children>
+</AnchorPane>

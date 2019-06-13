@@ -1,5 +1,45 @@
 package application;
 
-public class Clinic extends User {
+import java.util.ArrayList;
 
+public class Clinic extends User {
+    private String email;
+    private String address;
+
+    public Clinic() {
+
+    }
+
+    public Clinic(String name, String email, String address, String password, String image, String phone) {
+        super(name, password, image, phone);
+        this.email = email;
+        this.address = address;
+    }
+
+    @Override
+    public void login(String name, String password) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public ArrayList<String> getProfile(String name) {
+        return null;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }

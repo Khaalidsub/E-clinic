@@ -1,7 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
-<?import javafx.scene.layout.AnchorPane?>
-	
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
-	<!-- TODO Add Nodes -->
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="application.HomeController">
+    <children>
+        <VBox alignment="CENTER" layoutX="100.0" prefHeight="800.0" prefWidth="300.0" spacing="20.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView disable="true" fitHeight="143.0" fitWidth="246.0" pickOnBounds="true" preserveRatio="true"
+                           smooth="false">
+                    <image>
+                        <Image url="@../images/app-04.png"/>
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" text="Welcome at E-clinic"
+                       textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#SignIn" prefHeight="25.0" prefWidth="182.0"
+                           ripplerFill="#a869ff" style="-fx-background-color: #0BACA1;" text="Sign-in" textFill="WHITE"
+                           textOverrun="CENTER_WORD_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets top="50.0"/>
+                    </VBox.margin>
+                </JFXButton>
+                <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#SignUp" prefHeight="25.0" prefWidth="182.0"
+                           ripplerFill="#a869ff" style="-fx-background-color: #0BACA1;" text="Sign-up" textFill="WHITE"
+                           textOverrun="CENTER_WORD_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </JFXButton>
+                <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" text="Choose a User"
+                       textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets top="50.0"/>
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Label>
+                <JFXRadioButton text="Patient">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="User"/>
+                    </toggleGroup>
+                    <VBox.margin>
+                        <Insets left="10.0"/>
+                    </VBox.margin>
+                </JFXRadioButton>
+                <JFXRadioButton contentDisplay="CENTER" text="Clinic" toggleGroup="$User">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </JFXRadioButton>
+                <JFXRadioButton text="Doctor" toggleGroup="$User">
+                    <VBox.margin>
+                        <Insets bottom="200.0" left="10.0"/>
+                    </VBox.margin>
+                </JFXRadioButton>
+            </children>
+        </VBox>
+    </children>
+    <effect>
+        <Blend/>
+    </effect>
 </AnchorPane>

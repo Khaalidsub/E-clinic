@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="PatientUI.Home">
+    <children>
+        <VBox alignment="CENTER" layoutX="200.0" layoutY="145.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="labelling" accessibleText="label">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="time">
+                    <font>
+                        <Font size="10.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="200.0" right="100.0"/>
+                    </VBox.margin>
+                </Label>
+                <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#CheckClinic" prefHeight="37.0"
+                           prefWidth="141.0" ripplerFill="#3647c9" style="-fx-background-color: #0BACA1;"
+                           text="Check Clinics nearby" textFill="WHITE"/>
+                <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#CheckProfile" prefHeight="37.0"
+                           prefWidth="141.0" ripplerFill="#3647c9" style="-fx-background-color: #0BACA1;"
+                           text="Check Profile" textFill="WHITE"/>
+                <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#LogOut" prefHeight="37.0" prefWidth="141.0"
+                           ripplerFill="#3647c9" style="-fx-background-color: #0BACA1;" text="Logout" textFill="WHITE"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
