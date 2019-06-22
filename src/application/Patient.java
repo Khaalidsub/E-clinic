@@ -60,5 +60,10 @@ public class Patient extends User {
         patient = new PatientDA();
         return patient.getView();
     }
+    public ObservableList<Doctor> getDoctor(String data) {
+        patient = new PatientDA();
+        return  patient.getDoctor(data);
+    }
+
 }
 

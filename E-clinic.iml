@@ -14,7 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="jdk" jdkName="IntelliJ IDEA Community Edition IC-183.5429.30" jdkType="IDEA JDK" />
+    <orderEntry type="jdk" jdkName="1.8 (2)" jdkType="JavaSDK" />
     <orderEntry type="library" name="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER" level="application" />
     <orderEntry type="library" name="JAVAFX12" level="project" />
     <orderEntry type="module-library">

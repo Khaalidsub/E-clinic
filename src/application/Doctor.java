@@ -1,5 +1,6 @@
 package application;
 
+import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -9,6 +10,7 @@ public class Doctor extends User {
     private String specialization;
     private Date Time_start;
     private Date Time_end;
+    private  String time;
 
     public Doctor() {
 
@@ -20,6 +22,12 @@ public class Doctor extends User {
         this.specialization = specialization;
         this.Time_end = Time_end;
         this.Time_start = start;
+
+    }
+    public Doctor(String name,String specialization, String Time){
+        this.name = name;
+        this.specialization = specialization;
+        this.time = Time;
 
     }
 

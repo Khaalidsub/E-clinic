@@ -115,16 +115,63 @@ public class PatientDA {
             ps = conn.prepareStatement(query);
             re = ps.executeQuery();
             while (re.next()) {
-                Clinic clinic = new Clinic();
+
+
                 String name = re.getString("name");
                 String address = re.getString("address");
 
-                list2.add(clinic);
+                list2.add(new Clinic(name,address));
             }
             conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return list2;
+    }
+
+    public ObservableList<Doctor> getDoctor(String data) {
+
+        String query2 = "SELECT * FROM clinic WHERE name=?";
+        String ID = null;
+        try {
+            conn = getConnect();
+            ps = conn.prepareStatement(query2);
+            ps.setString(1, data);
+            re = ps.executeQuery();
+            while (re.next()) {
+
+                ID = re.getString("ID");
+            }
+            conn.close();
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+
+        query = "SELECT * FROM doc WHERE Clinic_ID =?";
+        try {
+            conn = getConnect();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, ID);
+            re = ps.executeQuery();
+            while (re.next()) {
+
+                String name = re.getString("name");
+                String specialization = re.getString("specialization");
+                Time time1= re.getTime("time_start");
+                System.out.println(time1.toString());
+
+                Time time2 = re.getTime("time_end");
+                System.out.println(time2.toString());
+                String time = time1.toString() + "  -  " + time2.toString();
+                System.out.println(time);
+                list.add(new Doctor(name,specialization,time));
+            }
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }

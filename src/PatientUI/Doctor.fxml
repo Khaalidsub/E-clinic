@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
-            xmlns="http://javafx.com/javafx"
-            fx:controller="PatientUI.Doctor"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.layout.VBox?>
 
+<AnchorPane prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PatientUI.Doctor">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="500.0">
+         <children>
+            <TableView fx:id="Table" onMouseClicked="#ClinicClick" prefHeight="800.0" prefWidth="500.0" stylesheets="@application.css">
+               <columns>
+                  <TableColumn fx:id="nameColumn" prefWidth="126.0" text="Name" />
+                  <TableColumn fx:id="Specialcolumn" prefWidth="219.0" text="Specialization" />
+                  <TableColumn fx:id="timeColumn" prefWidth="154.0" text="Time" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <JFXButton layoutY="751.0" onAction="#backClick" prefHeight="32.0" prefWidth="105.0" text="Back">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/app-05.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="RIGHT" layoutX="322.0" layoutY="753.0" onAction="#AppointClick" prefHeight="35.0" prefWidth="178.0" text="Take Appointment">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="78.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/app-05.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
 </AnchorPane>

@@ -27,6 +27,7 @@ public class SignController extends application.Main implements Initializable {
     void SignedIn(ActionEvent event) {
         String username = PatientName.getText();
         String userpass = PatientPassword.getText();
+        
 
         new application.Patient(username, userpass);
 
@@ -41,6 +42,11 @@ public class SignController extends application.Main implements Initializable {
         }
 
 
+    }
+
+    @FXML
+    void Register(ActionEvent event){
+// TODO: 6/15/2019 registration patient
     }
 
     @FXML
@@ -59,6 +65,7 @@ public class SignController extends application.Main implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+
         label.setText("Patient Sign-in");
 
     }
